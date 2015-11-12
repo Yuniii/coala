@@ -1,0 +1,58 @@
+@require 'vars'
+@require 'basic'
+
+header
+    background url('../images/hero-bg.jpg') no-repeat
+    min-height header-min-height
+    height 1vh
+    p, h1, h2, h3
+        color main-white
+
+.navbar
+    background rgba(0,0,0,0.16)
+    height navbar-height
+    padding 0 navbar-padding-lr
+    .logo
+        background url('../images/logo.png') no-repeat center center
+        width 288px
+        height navbar-height
+    li a
+        color main-white
+        height navbar-height
+        font nav-font
+        padding nav-link-padding
+        transition all 0.4s ease
+        &:active
+            color main-white
+            background none
+    li:hover a
+        color main-white
+        background rgba(0,0,0,0.12)
+
+.hero
+    margin-top hero-margin-top
+    h1
+        font-size hero-heading-font-size
+        font-weight bold
+        text-align center
+        margin-bottom hero-heading-margin-bottom
+    p
+        font-size hero-p-font-size
+        line-height hero-p-line-height
+
+.main-body
+    h2
+        font-size 32px
+        font-weight bold
+
+.codellege h2
+    color codellege-color
+
+.tutorcloud h2
+    color tutorcloud-color
+
+.matchboard h2
+    color matchboard-color
+
+footer
+    background footer-bg
