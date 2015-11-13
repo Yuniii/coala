@@ -19,10 +19,12 @@ header
     li a
         color main-white
         height navbar-height
+        min-width 140px
+        text-align center
         font nav-font
         padding nav-link-padding
         transition all 0.4s ease
-        &:active
+        &:active, &:focus
             color main-white
             background none
     li:hover a
@@ -39,6 +41,24 @@ header
     p
         font-size hero-p-font-size
         line-height hero-p-line-height
+
+.hero-btn
+    margin-top hero-btn-margin-top
+    font-weight bold
+    a
+        background none
+        color main-white
+        font-size hero-btn-font-size
+        width hero-btn-width
+        line-height hero-btn-height
+        height hero-btn-height
+        transition all 0.4s ease
+    .action
+        border hero-btn-action-border
+        border-radius hero-btn-action-radius
+        &:hover
+            color main-white
+            background rgba(255, 255, 255, 0.1)
 
 .main-body
     h2
