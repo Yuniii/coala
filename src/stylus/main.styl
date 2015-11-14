@@ -1,78 +1,107 @@
 @require 'vars'
+@require 'functions'
 @require 'basic'
+
+@require 'navbar'
 
 header
     background url('../images/hero-bg.jpg') no-repeat
     min-height header-min-height
-    height 1vh
+    height 100vh
+    margin-bottom header-margin-bottom
     p, h1, h2, h3
         color main-white
 
-.navbar
-    background rgba(0,0,0,0.16)
-    height navbar-height
-    padding 0 navbar-padding-lr
-    .logo
-        background url('../images/logo.png') no-repeat center center
-        width 288px
-        height navbar-height
-    li a
-        color main-white
-        height navbar-height
-        min-width 140px
-        text-align center
-        font nav-font
-        padding nav-link-padding
-        transition all 0.4s ease
-        &:active, &:focus
-            color main-white
-            background none
-    li:hover a
-        color main-white
-        background rgba(0,0,0,0.12)
-
 .hero
     margin-top hero-margin-top
+    .hero-describe
+        width 40%
+        @media screen and (max-width: 1280px)
+            width 66%
+        @media screen and (max-width: 1000px)
+            width 76%
     h1
         font-size hero-heading-font-size
         font-weight bold
         text-align center
         margin-bottom hero-heading-margin-bottom
+        @media screen and (max-width: 1000px)
+            font-size @font-size * 0.8
     p
         font-size hero-p-font-size
         line-height hero-p-line-height
+        @media screen and (max-width: 1000px)
+            font-size @font-size * 0.8
 
 .hero-btn
     margin-top hero-btn-margin-top
     font-weight bold
+    text-align center
     a
         background none
         color main-white
         font-size hero-btn-font-size
         width hero-btn-width
         line-height hero-btn-height
-        height hero-btn-height
         transition all 0.4s ease
+        &:hover, &:active, &:focus
+            color main-white
+        @media screen and (max-width: 1000px)
+            width @width * 0.8
+            font-size @font-size * 0.8
     .action
         border hero-btn-action-border
         border-radius hero-btn-action-radius
-        &:hover
-            color main-white
-            background rgba(255, 255, 255, 0.1)
+        &:hover, &:active, &:focus
+            background blackA(0.36)
+    .secondary-action
+        margin-left 32px
+        i
+            margin-left 20px
 
-.main-body
+.main-body>div
+    padding product-section-padding-tb 0
+    &:nth-child(even)
+        background product-section-alt-bg
+        box-shadow inset 0 6px 4px -4px #CCC, inset 0 -6px 4px -4px #CCC
+
+.product-section
+    width site-width
+    margin 0 auto
+    article
+        padding 0 article-padding-lr
     h2
         font-size 32px
-        font-weight bold
+        font-weight bold        
 
-.codellege h2
-    color codellege-color
+.codellege article
+    margin-top 30px
+    h2
+        color codellege-color
 
-.tutorcloud h2
-    color tutorcloud-color
+.tutorcloud article
+    h2
+        color tutorcloud-color
 
-.matchboard h2
-    color matchboard-color
+.matchboard article
+    margin-top 15px
+    h2
+        color matchboard-color
 
 footer
     background footer-bg
+    color main-white
+    border-bottom 20px solid coala-green
+    padding footer-padding
+    text-align center
+    .logo-container
+        line-height footer-logo-height
+    img.logo
+        height footer-logo-height
+        vertical-align middle
+        margin-right 16px
+    ul
+        list-style-type none
+        li a
+            color main-white
+            

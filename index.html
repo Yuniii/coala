@@ -14,7 +14,16 @@
             <div class="logo uk-navbar-brand"></div>
             <div class="uk-navbar-flip">
                 <ul class="uk-navbar-nav">
-                    <li><a href="#">產品</a></li>
+                    <li class="uk-parent" data-uk-dropdown>
+                        <a href="#">產品 <i class="uk-icon-caret-down"></i></a>
+                        <div class="uk-dropdown uk-dropdown-navbar sub-nav-container">
+                            <ul class="uk-nav sub-nav">
+                                <li><a href="#Codellege">Codellege</a></li>
+                                <li><a href="#TutorCloud">TutorCloud</a></li>
+                                <li><a href="#MatchBoard">MatchBoard</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="about.html">關於本計劃</a></li>
                     <li><a href="donate.html">贊助我們</a></li>
                     <li><a href="contact.html">聯絡我們</a></li>
@@ -23,50 +32,64 @@
         </nav>
         <div class="hero">
             <h1>全方位的程式語言學習解決方案</h1>
-            <div class="uk-width-2-5 uk-container-center">
+            <div class="hero-describe uk-container-center">
                 <p>Coala 程式語言學習中心提供全方位的免費程式學習資源，如線上課程與獨家練習系統，致力於培養、訓練臺灣未來程式設計人才，以解決目前臺灣軟體產業人才嚴重短缺的問題。</p>
                 <div class="hero-btn">
                     <a href="#" class="uk-button action">贊助我們</a>
-                    <a href="#" class="uk-button secondary-action">了解更多</a>
+                    <a href="#" class="uk-button uk-button-link secondary-action">了解更多<i class="uk-icon-angle-right"></i></a>
                 </div>
             </div>
         </div>
     </header>
     <div class="main-body">
-        <div class="codellege">
-            <article>
-                <h2>規劃完善的線上學習課程與練習系統</h2>
-                <p>Codellege 是一個課程內容豐富、以實際練習為導向，擁有大量實作練習題的線上程式學習系統。提供一系列完整且經過專家所規劃的課程，如 Java 以及 C 語言，內容循序漸進、由淺入深。根據多年教學經驗的實證，大量的練習與實作就是學習程式語言最快的捷徑。使用者只要一步一步跟著 Codellege 內精心規劃的課程，不斷動手撰寫程式，就能最有效率地熟悉並且活用各種程式語言。</p>
-            </article>
+        <div>
+            <div class="codellege product-section uk-grid">
+                <div class="uk-width-1-3"><img src="./assets/images/codellege.png" alt=""></div>
+                <article class="uk-width-2-3">
+                    <h2>規劃完善的線上學習課程與練習系統</h2>
+                    <p>Codellege 是一個課程內容豐富、以實際練習為導向，擁有大量實作練習題的線上程式學習系統。提供一系列完整且經過專家所規劃的課程，如 Java 以及 C 語言，內容循序漸進、由淺入深。根據多年教學經驗的實證，大量的練習與實作就是學習程式語言最快的捷徑。使用者只要一步一步跟著 Codellege 內精心規劃的課程，不斷動手撰寫程式，就能最有效率地熟悉並且活用各種程式語言。</p>
+                </article>
+            </div>
         </div>
-        <div class="tutorcloud">
-            <article>
-                <h2>突破師生距離限制的遠距教學平台</h2>
-                <p>TutorCloud 是一個具有高互動性的遠距程式教學平台，除了提供線上多人即時同步的程式撰寫與討論空間之外，更提供雲端程式編譯功能，使用者無需在自己的電腦上安裝任何額外的軟體，就可以直接透過瀏覽器進行程式編譯，並即時顯示執行結果。再透過即時互動白板、文件上傳與聊天室的輔佐，對於程式的討論與教學更加直覺便利。</p>
-            </article>
+        <div>
+            <div class="tutorcloud product-section uk-grid">
+                <article class="uk-width-2-3">
+                    <h2>突破師生距離限制的遠距教學平台</h2>
+                    <p>TutorCloud 是一個具有高互動性的遠距程式教學平台，除了提供線上多人即時同步的程式撰寫與討論空間之外，更提供雲端程式編譯功能，使用者無需在自己的電腦上安裝任何額外的軟體，就可以直接透過瀏覽器進行程式編譯，並即時顯示執行結果。再透過即時互動白板、文件上傳與聊天室的輔佐，對於程式的討論與教學更加直覺便利。</p>
+                </article>
+                <div class="uk-width-1-3"><img src="./assets/images/tutorcloud.png" alt=""></div>
+            </div>
         </div>
-        <div class="matchboard">
-            <article>
-                <h2>企業與人才，老師與學生的媒合平台</h2>
-                <p>MatchBoard 是一個提供程式相關媒合的平台，無論是企業徵才，或是程式學習需求，都可以利用 MatchBoard 來進行配對。企業甚至能夠搭配 Codellege 學習歷程，篩選、配對並找出適合的人才。有程式語言學習需求的使用者，也可以透過 MatchBoard 來尋找適合自己的指導者，同時再搭配 TutorCloud 的使用，以提升程式學習成效 。</p>
-            </article>
+        <div>
+            <div class="matchboard product-section uk-grid">
+                <div class="uk-width-1-3"><img src="./assets/images/matchboard.png" alt=""></div>
+                <article class="uk-width-2-3">
+                    <h2>企業與人才，老師與學生的媒合平台</h2>
+                    <p>MatchBoard 是一個提供程式相關媒合的平台，無論是企業徵才，或是程式學習需求，都可以利用 MatchBoard 來進行配對。企業甚至能夠搭配 Codellege 學習歷程，篩選、配對並找出適合的人才。有程式語言學習需求的使用者，也可以透過 MatchBoard 來尋找適合自己的指導者，同時再搭配 TutorCloud 的使用，以提升程式學習成效 。</p>
+                </article>
+            </div>
         </div>
     </div>
-    <footer class="uk-grid">
-        <div class="uk-width-large-1-3">2015</div>
-        <div class="uk-width-large-1-3">
-            <ul>
-                <li>Codellege</li>
-                <li>TutorCloud</li>
-                <li>MatchBoard</li>
-            </ul>
-        </div>
-        <div class="uk-width-large-1-3">
-            <ul>
-                <li>關於本計劃</li>
-                <li>贊助我們</li>
-                <li>聯絡我們</li>
-            </ul>
+    <footer>
+        <div class="uk-grid uk-container-center container">
+            <div class="logo-container uk-width-large-1-3 uk-vertical-align">
+                <div class="uk-vertical-align-middle"><img src="./assets/images/logo.png" class="logo" alt="Coala Logo"> © 2015</div>
+                
+            </div>
+            <div class="uk-width-large-1-3">
+                <ul>
+                    <li><a href="#">Codellege</a></li>
+                    <li><a href="#">TutorCloud</a></li>
+                    <li><a href="#">MatchBoard</a></li>
+                </ul>
+            </div>
+            <div class="uk-width-large-1-3">
+                <ul>
+                    <li><a href="#">關於本計劃</a></li>
+                    <li><a href="#">贊助我們</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
     
