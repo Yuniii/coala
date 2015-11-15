@@ -20,6 +20,7 @@ handlers:
   static_dir: assets
 - url: /vendors
   static_dir: vendors
+  expiration: "10d 0m"
 - url: /.*
   script: _go_app
 
