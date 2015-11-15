@@ -1,78 +1,44 @@
 @require 'vars'
 @require 'functions'
+@require 'utilities'
 @require 'basic'
 
 @require 'navbar'
+@require 'hero'
 
 header
     background url('../images/hero-bg.jpg') no-repeat
     min-height header-min-height
     height 100vh
-    margin-bottom header-margin-bottom
+    padding-bottom header-padding-bottom
+    @media screen and (max-width: 767px)
+        padding-bottom @padding-bottom * 1.5
     p, h1, h2, h3
         color main-white
-
-.hero
-    margin-top hero-margin-top
-    .hero-describe
-        width 40%
-        @media screen and (max-width: 1280px)
-            width 66%
-        @media screen and (max-width: 1000px)
-            width 76%
-    h1
-        font-size hero-heading-font-size
-        font-weight bold
-        text-align center
-        margin-bottom hero-heading-margin-bottom
-        @media screen and (max-width: 1000px)
-            font-size @font-size * 0.8
-    p
-        font-size hero-p-font-size
-        line-height hero-p-line-height
-        @media screen and (max-width: 1000px)
-            font-size @font-size * 0.8
-
-.hero-btn
-    margin-top hero-btn-margin-top
-    font-weight bold
-    text-align center
-    a
-        background none
-        color main-white
-        font-size hero-btn-font-size
-        width hero-btn-width
-        line-height hero-btn-height
-        transition all 0.4s ease
-        &:hover, &:active, &:focus
-            color main-white
-        @media screen and (max-width: 1000px)
-            width @width * 0.8
-            font-size @font-size * 0.8
-    .action
-        border hero-btn-action-border
-        border-radius hero-btn-action-radius
-        &:hover, &:active, &:focus
-            background blackA(0.36)
-    .secondary-action
-        margin-left 32px
-        i
-            margin-left 20px
 
 .main-body>div
     padding product-section-padding-tb 0
     &:nth-child(even)
         background product-section-alt-bg
-        box-shadow inset 0 6px 4px -4px #CCC, inset 0 -6px 4px -4px #CCC
+        box-shadow inset 0 7px 4px -4px #CCC, inset 0 -7px 4px -4px #CCC
 
 .product-section
-    width site-width
+    max-width site-width
     margin 0 auto
     article
         padding 0 article-padding-lr
     h2
         font-size 32px
-        font-weight bold        
+        font-weight bold
+
+
+@media screen and (min-width: 480px)
+    .product-img-container
+        position relative
+        img
+            position absolute
+            top 0;bottom 0;left 0;right 0
+            margin auto!important
 
 .codellege article
     margin-top 30px
@@ -82,6 +48,8 @@ header
 .tutorcloud article
     h2
         color tutorcloud-color
+        @media screen and (max-width: 479px)
+            margin-top 46px
 
 .matchboard article
     margin-top 15px
@@ -94,14 +62,22 @@ footer
     border-bottom 20px solid coala-green
     padding footer-padding
     text-align center
+    font-size footer-font-size
     .logo-container
-        line-height footer-logo-height
+        display flex
+        justify-content center
+        >div
+            align-self center
     img.logo
         height footer-logo-height
-        vertical-align middle
         margin-right 16px
     ul
         list-style-type none
+        li
+            margin-bottom 12px
         li a
+            font-size footer-font-size
             color main-white
+            &:hover, &:focus, &:active
+                color main-white
             

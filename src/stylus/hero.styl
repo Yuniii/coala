@@ -1,0 +1,60 @@
+.hero
+    padding-top hero-padding-top
+    .hero-describe
+        width 42%
+        @media screen and (max-width: 1400px)
+            width 56%
+        @media screen and (max-width: 1280px)
+            width 66%
+        @media screen and (max-width: 1000px)
+            width 76%
+    h1
+        font-size hero-heading-font-size
+        font-weight bold
+        text-align center
+        margin-bottom hero-heading-margin-bottom
+        @media screen and (max-width: 1000px)
+            font-size @font-size * 0.8
+            margin-bottom @margin-bottom * 0.8
+        @media screen and (max-width: 767px)
+            font-size @font-size * 0.6
+            margin-bottom @margin-bottom * 0.6
+    p
+        font-size hero-p-font-size
+        line-height hero-p-line-height
+        @media screen and (max-width: 1000px)
+            font-size @font-size * 0.8
+
+.hero-btn
+    margin-top hero-btn-margin-top
+    font-weight bold
+    text-align center
+    @media screen and (max-width: 1000px)
+        margin-top @margin-top * 0.76
+    @media screen and (max-width: 767px)
+        margin-top @margin-top * 0.56
+    a
+        background none
+        color main-white
+        font-size hero-btn-font-size
+        width hero-btn-width
+        line-height hero-btn-height
+        transition all 0.4s ease
+        &:hover, &:active, &:focus
+            color main-white
+        @media screen and (max-width: 1000px)
+            width @width * 0.8
+            line-height @line-height * 0.8
+            font-size @font-size * 0.8
+    .action
+        border hero-btn-action-border
+        border-radius hero-btn-action-radius
+        &:hover, &:active, &:focus
+            background blackA(0.4)
+    .secondary-action
+        margin-left 32px
+        i
+            transition all 0.2s ease
+            margin-left 16px
+    .secondary-action:hover i
+        margin-left 36px
